@@ -163,12 +163,13 @@
         <img src="https://i.pinimg.com/564x/8f/9e/86/8f9e86a4eea6e55aa4e2ca6f32714f0f.jpg" alt="Pollo">
         <p>Los pollos pueden ser pequeños, pero tienen un gran espíritu. Me recuerdas a ellos porque aunque parezcas frágil, tienes una fuerza y valentía increíble. 🐔❤️</p>
     </div>
+
     <script>
         function togglePlay() {
             var song = document.getElementById("song");
             var button = document.querySelector(".play-btn");
             if (song.paused) {
-                song.currentTime = 2;
+                song.currentTime = 0;
                 song.play();
                 fadeInAudio(song); // Llamamos a la función fade-in
                 button.textContent = "⏸️ Pausar";
@@ -191,9 +192,16 @@
 
         // Función para hacer un fade-in en el audio
         function fadeInAudio(audio) {
-            let fadeDuration = 5; // Duración del fade en segundos
-            let fadeStep = 0.02;  // Cuánto aumentar el volumen por intervalo
-            let interval = fadeDuration * 1000 * fadeStep; // Intervalo en milisegundos
+            let fadeDuration = 4; // Duración del fade-in en segundos
+            audio.volume = 0; // Comenzamos con el volumen en 0
+
+            let fadeInterval = setInterval(function() {
+                if (audio.volume < 1) {
+                    audio.volume += 0.02; // Aumentamos el volumen poco a poco
+                } else {
+                    clearInterval(fadeInterval); // Paramos el intervalo cuando el volumen llegue a 1
+                }
+            }, fadeDuration * 50); // El intervalo de tiempo para el fade-in (ajustado a 50ms)
         }
     </script>
 </body>
