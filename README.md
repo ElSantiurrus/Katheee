@@ -1,4 +1,92 @@
 <html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Katheee 💖</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&family=Dancing+Script:wght@400;700&display=swap');
+        body {
+            text-align: center;
+            background: url('https://www.ecoticias.com/wp-content/uploads/2024/02/avion.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            animation: fadeIn 2s ease-in-out;
+            min-height: 180vh;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 120vh;
+            position: relative;
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+        }
+        h1 {
+            font-size: 5rem;
+            margin-bottom: 20px;
+            text-shadow: 6px 6px 15px rgba(0, 0, 0, 0.7);
+            animation: slideDown 1.5s ease-in-out;
+            font-weight: 900;
+            font-family: 'Dancing Script', cursive;
+        }
+        p {
+            font-size: 1.8rem;
+            max-width: 800px;
+            padding: 0 20px;
+            text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.7);
+            animation: fadeIn 2.5s ease-in-out;
+            font-weight: 600;
+        }
+        img {
+            width: 80%;
+            max-width: 600px;
+            margin-top: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.6);
+            animation: fadeIn 3s ease-in-out;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+        .separator {
+            width: 60%;
+            height: 2px;
+            background: white;
+            margin: 20px 0;
+        }
+        .music {
+            margin-top: 40px;
+        }
+        .play-btn {
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            color: white;
+            padding: 15px 40px;
+            font-size: 2rem;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.6);
+            transition: 0.3s;
+            font-weight: 900;
+        }
+        .play-btn:hover {
+            background: linear-gradient(to right, #ff4e50, #ff2024);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideDown {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
 <body>
     <div class="container">
         <h1>Katheee 💖</h1>
