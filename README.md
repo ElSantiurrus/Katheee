@@ -169,7 +169,7 @@
             var song = document.getElementById("song");
             var button = document.querySelector(".play-btn");
             if (song.paused) {
-                song.currentTime = 0;
+                song.currentTime = 2; // Iniciar la canción desde el segundo 2
                 song.play();
                 fadeInAudio(song); // Llamamos a la función fade-in
                 button.textContent = "⏸️ Pausar";
@@ -177,6 +177,17 @@
                 song.pause();
                 button.textContent = "▶️ Reproducir";
             }
+        }
+
+        function fadeInAudio(audio) {
+            audio.volume = 0; // Comienza el volumen en 0
+            var fadeInInterval = setInterval(function() {
+                if (audio.volume < 1) {
+                    audio.volume += 0.05; // Aumentar el volumen de manera gradual
+                } else {
+                    clearInterval(fadeInInterval);
+                }
+            }, 200); // Aumentar cada 200 ms para lograr un fade-in de 4 segundos
         }
 
         // Función para alternar el tamaño de la imagen al hacer clic
@@ -188,14 +199,6 @@
                 img.classList.add("expanded");
                 img.style.transform = "scale(2)";
             }
-        }
-
-        // Función para hacer un fade-in en el audio
-               // Función para hacer un fade-in en el audio
-        function fadeInAudio(audio) {
-            let fadeDuration = 5; // Duración del fade en segundos
-            let fadeStep = 0.02;  // Cuánto aumentar el volumen por intervalo
-            let interval = fadeDuration * 1000 * fadeStep; // Intervalo en milisegundos
         }
     </script>
 </body>
