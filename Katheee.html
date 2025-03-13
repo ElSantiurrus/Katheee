@@ -12,23 +12,23 @@
             font-family: 'Poppins', sans-serif;
             color: white;
             animation: fadeIn 2s ease-in-out;
-            min-height: 100vh;
+            min-height: 180vh;
         }
         .container {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            min-height: 90vh;
+            min-height: 120vh;
             position: relative;
             backdrop-filter: blur(10px);
-            padding: 20px;
+            padding: 40px;
             border-radius: 20px;
             background: rgba(0, 0, 0, 0.7);
             box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
         }
         h1 {
-            font-size: 3.5rem;
+            font-size: 6rem;
             margin-bottom: 20px;
             text-shadow: 6px 6px 15px rgba(0, 0, 0, 0.7);
             animation: slideDown 1.5s ease-in-out;
@@ -36,15 +36,16 @@
             font-family: 'Dancing Script', cursive;
         }
         p {
-            font-size: 1.4rem;
+            font-size: 1.6rem;
             max-width: 800px;
             padding: 0 20px;
             text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.7);
             animation: fadeIn 2.5s ease-in-out;
             font-weight: 600;
+            margin-bottom: 30px; /* Espaciado mayor entre el texto y la siguiente imagen */
         }
         img {
-            width: 90%;
+            width: 80%;
             max-width: 600px;
             margin-top: 20px;
             border-radius: 15px;
@@ -77,51 +78,34 @@
         .play-btn:hover {
             background: linear-gradient(to right, #ff4e50, #ff2024);
         }
-
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
-
         @keyframes slideDown {
             from { transform: translateY(-50px); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }
         }
 
-        /* Media Queries para pantallas pequeñas */
+        /* Estilos adicionales para móvil */
         @media (max-width: 768px) {
             h1 {
-                font-size: 2.5rem;
+                font-size: 4.5rem; /* Reduzco el tamaño del título en pantallas más pequeñas */
             }
             p {
-                font-size: 1.2rem;
-            }
-            img {
-                width: 100%;
-                max-width: 100%;
+                font-size: 1.5rem; /* Aumento el tamaño de la fuente de los textos en móviles */
             }
             .container {
-                padding: 15px;
+                padding: 20px; /* Reduzco el padding para que quede mejor en pantallas pequeñas */
             }
             .separator {
-                width: 80%;
+                width: 80%; /* Hago que la línea sea un poco más delgada en pantallas pequeñas */
+            }
+            .music {
+                margin-top: 30px;
             }
             .play-btn {
-                font-size: 1.8rem;
-                padding: 12px 30px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 2rem;
-            }
-            p {
-                font-size: 1.1rem;
-            }
-            .play-btn {
-                font-size: 1.5rem;
-                padding: 10px 25px;
+                font-size: 1.8rem; /* Reducir el tamaño del botón en pantallas pequeñas */
             }
         }
     </style>
@@ -142,13 +126,13 @@
         </div>
         <div class="separator"></div>
         <!-- Imágenes de Panda, Mariposa y Pollo más grandes -->
-        <img src="https://media.cnn.com/api/v1/images/stellar/prod/cnne-1446530-el-tierno-momento-en-el-que-unos-pandas-bebes-comen-en-china.jpg?c=original" alt="Panda">
+        <img src="https://media.cnn.com/api/v1/images/stellar/prod/cnne-1446530-el-tierno-momento-en-el-que-unos-pandas-bebes-comen-en-china.jpg?c=original" alt="Panda" style="width: 80%;">
         <p>Tu ternura y calidez me recuerdan a un panda, ese ser adorable que con solo verlo da ganas de abrazarlo. Así eres tú, con tu dulzura haces que el mundo se sienta más lindo. 🐼💕</p>
         <div class="separator"></div>
-        <img src="https://images.unsplash.com/photo-1647673542835-ca8c891674cc?fm=jpg&q=60&w=3000" alt="Mariposa">
+        <img src="https://images.unsplash.com/photo-1647673542835-ca8c891674cc?fm=jpg&q=60&w=3000" alt="Mariposa" style="width: 80%;">
         <p>Las mariposas simbolizan transformación y belleza. Eres como una mariposa, trayendo luz y color a la vida de quienes te rodean. 🦋✨</p>
         <div class="separator"></div>
-        <img src="https://i.pinimg.com/564x/8f/9e/86/8f9e86a4eea6e55aa4e2ca6f32714f0f.jpg" alt="Pollo">
+        <img src="https://i.pinimg.com/564x/8f/9e/86/8f9e86a4eea6e55aa4e2ca6f32714f0f.jpg" alt="Pollo" style="width: 80%;">
         <p>Los pollos pueden ser pequeños, pero tienen un gran espíritu. Me recuerdas a ellos porque aunque parezcas frágil, tienes una fuerza y valentía increíble. 🐔❤️</p>
     </div>
     <script>
