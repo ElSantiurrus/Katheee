@@ -191,17 +191,11 @@
         }
 
         // Función para hacer un fade-in en el audio
+              // Función para hacer un fade-in en el audio
         function fadeInAudio(audio) {
-            let fadeDuration = 4; // Duración del fade-in en segundos
-            audio.volume = 0; // Comenzamos con el volumen en 0
-
-            let fadeInterval = setInterval(function() {
-                if (audio.volume < 1) {
-                    audio.volume += 0.02; // Aumentamos el volumen poco a poco
-                } else {
-                    clearInterval(fadeInterval); // Paramos el intervalo cuando el volumen llegue a 1
-                }
-            }, fadeDuration * 50); // El intervalo de tiempo para el fade-in (ajustado a 50ms)
+            let fadeDuration = 5; // Duración del fade en segundos
+            let fadeStep = 0.02;  // Cuánto aumentar el volumen por intervalo
+            let interval = fadeDuration * 1000 * fadeStep; // Intervalo en milisegundos
         }
     </script>
 </body>
